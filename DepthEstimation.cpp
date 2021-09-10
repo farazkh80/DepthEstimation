@@ -6,7 +6,7 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 
-#include "../inc/StereoVision.h"
+#include "inc/StereoVision.h"
 
 using namespace std;
 using namespace cv;
@@ -19,8 +19,8 @@ float alpha = 56.6;
 int main()
 {
 	Mat leftFrame, rightFrame;
-	VideoCapture capLeft(0);
-	VideoCapture capRight(1);
+	VideoCapture capLeft(1);
+	VideoCapture capRight(0);
 
 	if (!capLeft.isOpened()) {
 		cout << "Cannot Open Left Camera" << endl;
